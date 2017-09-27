@@ -1,0 +1,6 @@
+#! /usr/bin/env bash
+sudo modprobe -r mwifiex_pcie
+sudo modprobe -r mwifiex
+sudo modprobe mwifiex 11n_disable=1
+sudo modprobe mwifiex_pcie 11n_disable=1
+sudo systemctl restart network-manager.service
